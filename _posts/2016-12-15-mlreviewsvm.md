@@ -49,7 +49,7 @@ MathJax.Hub.Queue(function() {
 SVM主要用于二分类，模型与感知机类似，其基本想法为利用两个平行的超平面$$wx+b=1$$和$$wx+b=-1$$对数据进行分类，使得$$y_i=+1$$的数据点都落在$$wx+b=1$$的上面，$$y_i=-1$$的点都落下$$wx+b=-1$$的下面，同时使得两个超平面的距离$$\frac{2}{\|w\|}$$尽量大。即
 
 \\[\begin{cases}
-\min_{w,b}{\frac{1}{2}\|w\|^2}\
+\min_{w,b}{\frac{1}{2}\|w\|^2}\\
 y_i(wx_i+b)\geq 1,\forall i\\
 \end{cases}\\]
 
