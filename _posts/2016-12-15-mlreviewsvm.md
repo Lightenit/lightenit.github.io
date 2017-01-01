@@ -86,6 +86,6 @@ SMO算法主要用于解决SVM的对偶形式中$$u$$的最优化选取问题。
 
 \\[f(n) = 
 \begin{cases}
-n/2, & \text{if $n$ is even} \\
+n/2, & \text{if $n$ is even} \\[2ex]
 3n+1, & \text{if $n$ is odd}
 \end{cases}\\]
