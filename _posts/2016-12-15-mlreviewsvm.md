@@ -83,8 +83,8 @@ SMO算法主要用于解决SVM的对偶形式中$$u$$的最优化选取问题。
 3. 此时原优化问题转化为一个单变量二次的求最值问题，最值在边界或导数为0处取得
 4. 重复步骤2-3，直至$$u$$达到稳定
 
-\\[f(n) = 
+$$f(n) = 
 \begin{cases}
 n/2, & \text{if $n$ is even} \\[2ex]
 3n+1, & \text{if $n$ is odd}
-\end{cases}\\]
+\end{cases}$$
