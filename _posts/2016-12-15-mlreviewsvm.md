@@ -39,8 +39,7 @@ MathJax.Hub.Queue(function() {
 });
 </script>
 
-
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
  
 ## 支持向量机
 
