@@ -5,40 +5,6 @@ tags:
   - 机器学习复习
 ---
 
-
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-	tex2jax: {
-		inlineMath: [['$','$'], ['\\(','\\)']],
-		processEscapes: true,
-		skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-	},
-	 	  TeX: {
-			  equationNumbers: {
-				  autoNumber: ["AMS"],
-				  useLabelIds: true
-			  }
-		  },
-		  "HTML-CSS": {
-			  linebreaks: {
-				  automatic: true
-			  },
-			  scale: 85
-		  },
-		  SVG: {
-			  linebreaks: {
-				  automatic: true
-			  }
-		  }
-});
-MathJax.Hub.Queue(function() {
-	var all = MathJax.Hub.getAllJax(), i;
-	for(i = 0; i < all.length; i += 1) {
-		all[i].SourceElement().parentNode.className += ' has-jax';
-	}
-});
-</script>
-
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
  
 ## 支持向量机
@@ -58,7 +24,7 @@ y_i(wx_i+b)\geq 1,\forall i\\
 
 $$\begin{aligned}
 \frac{\partial f}{\partial w} &=w-\sum_{i=1}^{N}{u_iy_ix_i}=0 \\
-\frac{\partial f}{\partial b} &=-\sum_{i=1}^{N}{-u_iy_i}=0
+\frac{\partial f}{\partial b} &=-\sum_{i=1}^{N}{u_iy_i}=0
 \end{aligned}$$
 
 将上式带入可得到SVM的对偶形式：
