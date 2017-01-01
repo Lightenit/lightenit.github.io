@@ -16,13 +16,18 @@ SVM主要用于二分类，模型与感知机类似，其基本想法为利用�
 \\[\left\{\begin{align}\min_{w,b}{\frac{1}{2}\|w\|^2} \\\\
 y_i(wx_i+b)\geq 1,\forall i\end{align}\right.\\]
 
+\\[\begin{cases}
+\min_{w,b}{\frac{1}{2}\|w\|^2} \\\\
+y_i(wx_i+b)\geq 1,\forall i
+\end{cases}\\]
+
 利用Lagrange Multiper方法有:
 
 \\[f(w,b,u)=\frac{1}{2}\|w\|^2+\sum_{i=1}^{N}{u_i(1-y_i(wx_i+b))}\\]
 
 \\[\begin{align}
-\frac{\partial f}{\partial w}=w-\sum_{i=1}^{N}{u_iy_ix_i}=0 \\\\
-\frac{\partial f}{\partial b}=-\sum_{i=1}^{N}{-u_iy_i}=0\end{align}\\]
+\frac{\partial f}{\partial w} & = w-\sum_{i=1}^{N}{u_iy_ix_i}=0 \\\\
+\frac{\partial f}{\partial b} & = -\sum_{i=1}^{N}{-u_iy_i}=0\end{align}\\]
 
 将上式带入可得到SVM的对偶形式：
 
@@ -35,8 +40,8 @@ u_i\geq 0 \\
 \sum_{i=1}^{N}{u_iy_i}=0\end{align}\\]
 
 \\[\begin{cases}
-u_i\geq 0 \\\\
-\sum_{i=1}^{N}{u_iy_i}=0
+u_i & \geq 0 \\\\
+\sum_{i=1}^{N}{u_iy_i} & =0
 \end{cases}\\]
 
 则$$f(x)=wx+b=\sum_{i=1}^{N}{u_iy_ix_i^T}x+b$$
