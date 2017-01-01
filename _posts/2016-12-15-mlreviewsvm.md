@@ -34,10 +34,10 @@ y_i(wx_i+b)\geq 1,\forall i\end{align}\right.\\]
 u_i\geq 0 \\
 \sum_{i=1}^{N}{u_iy_i}=0\end{align}\\]
 
-\\[\begin{case}
+\\[\begin{cases}
 u_i\geq 0 \\\\
 \sum_{i=1}^{N}{u_iy_i}=0
-\end{case}\\]
+\end{cases}\\]
 
 则$$f(x)=wx+b=\sum_{i=1}^{N}{u_iy_ix_i^T}x+b$$
 
