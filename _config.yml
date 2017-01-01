@@ -14,7 +14,7 @@ description              : "An amazing website."
 url                      : "https://lightenit.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "Lightenit/lightenit.github.io"
-teaser                   : "/assets/images/unsplash-image-3.jpg"
+teaser                   : /assets/images/unsplash-image-3.jpg
 breadcrumbs              :  ture # true, false (default)
 words_per_minute         : 100
 comments:
@@ -60,7 +60,7 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 : # Open Graph/Twitter default site image
+og_image                 : /assets/images/bio-photo.png # Open Graph/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
@@ -70,15 +70,15 @@ social:
 
 # Analytics
 analytics:
-  provider               : false # false (default), "google", "google-universal", "custom"
+  provider               : "google-universal" # false (default), "google", "google-universal", "custom"
   google:
-    tracking_id          :
+    tracking_id          : "UA-89651771-1"
 
 
 # Site Author
 author:
   name             : "王恒亮"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/bio.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "I am an amazing person."
   location         : "Peking University"
   email            : "wanghl@pku.edu.cn"
@@ -89,7 +89,7 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           :
+  github           : "https://github.com/Lightenit"
   google_plus      :
   keybase          :
   instagram        :
