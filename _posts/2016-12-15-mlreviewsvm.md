@@ -4,7 +4,42 @@ tags:
   - SVM
   - 机器学习复习
 ---
- 
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+	tex2jax: {
+		inlineMath: [['$','$'], ['\\(','\\)']],
+		processEscapes: true,
+		skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+	},
+	 	  TeX: {
+			  equationNumbers: {
+				  autoNumber: ["AMS"],
+				  useLabelIds: true
+			  }
+		  },
+		  "HTML-CSS": {
+			  linebreaks: {
+				  automatic: true
+			  },
+			  scale: 85
+		  },
+		  SVG: {
+			  linebreaks: {
+				  automatic: true
+			  }
+		  }
+});
+MathJax.Hub.Queue(function() {
+	var all = MathJax.Hub.getAllJax(), i;
+	for(i = 0; i < all.length; i += 1) {
+		all[i].SourceElement().parentNode.className += ' has-jax';
+	}
+});
+</script>
+
+
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
  
 ## 支持向量机
@@ -14,7 +49,7 @@ tags:
 SVM主要用于二分类，模型与感知机类似，其基本想法为利用两个平行的超平面$$wx+b=1$$和$$wx+b=-1$$对数据进行分类，使得$$y_i=+1$$的数据点都落在$$wx+b=1$$的上面，$$y_i=-1$$的点都落下$$wx+b=-1$$的下面，同时使得两个超平面的距离$$\frac{2}{\|w\|}$$尽量大。即
 
 \\[\begin{cases}
-\min_{w,b}{\frac{1}{2}\|w\|^2}\\
+\min_{w,b}{\frac{1}{2}\|w\|^2}\
 y_i(wx_i+b)\geq 1,\forall i\\
 \end{cases}\\]
 
@@ -24,7 +59,8 @@ y_i(wx_i+b)\geq 1,\forall i\\
 
 \\[\begin{aligned}
 \frac{\partial f}{\partial w} &=w-\sum_{i=1}^{N}{u_iy_ix_i}=0 \\
-\frac{\partial f}{\partial b} &=-\sum_{i=1}^{N}{-u_iy_i}=0\end{aligned}\\]
+\frac{\partial f}{\partial b} &=-\sum_{i=1}^{N}{-u_iy_i}=0
+\end{aligned}\\]
 
 将上式带入可得到SVM的对偶形式：
 
