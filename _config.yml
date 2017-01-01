@@ -16,7 +16,7 @@ baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "Lightenit/lightenit.github.io"
 teaser                   : /assets/images/unsplash-image-3.jpg
 breadcrumbs              :  ture # true, false (default)
-words_per_minute         : 100
+words_per_minute         : 20
 comments:
 provider                 : "staticman"  # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
   disqus:
@@ -79,7 +79,7 @@ analytics:
 author:
   name             : "王恒亮"
   avatar           : "/assets/images/bio.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an amazing person."
+  bio              : "在谦卑中默默前行"
   location         : "Peking University"
   email            : "wanghl@pku.edu.cn"
   uri              :
