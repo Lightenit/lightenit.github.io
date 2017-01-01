@@ -47,19 +47,19 @@ MathJax.Hub.Queue(function() {
 
 SVM主要用于二分类，模型与感知机类似，其基本想法为利用两个平行的超平面$$wx+b=1$$和$$wx+b=-1$$对数据进行分类，使得$$y_i=+1$$的数据点都落在$$wx+b=1$$的上面，$$y_i=-1$$的点都落下$$wx+b=-1$$的下面，同时使得两个超平面的距离$$\frac{2}{\|w\|}$$尽量大。即
 
-\\[\begin{cases}
+$$\begin{cases}
 \min_{w,b}{\frac{1}{2}\|w\|^2}\\\\
 y_i(wx_i+b)\geq 1,\forall i\\
-\end{cases}\\]
+\end{cases}$$
 
 利用Lagrange Multiper方法有:
 
 \\[f(w,b,u)=\frac{1}{2}\|w\|^2+\sum_{i=1}^{N}{u_i(1-y_i(wx_i+b))}\\]
 
-\\[\begin{aligned}
+$$\begin{aligned}
 \frac{\partial f}{\partial w} &=w-\sum_{i=1}^{N}{u_iy_ix_i}=0 \\
 \frac{\partial f}{\partial b} &=-\sum_{i=1}^{N}{-u_iy_i}=0
-\end{aligned}\\]
+\end{aligned}$$
 
 将上式带入可得到SVM的对偶形式：
 
@@ -67,10 +67,10 @@ y_i(wx_i+b)\geq 1,\forall i\\
 
 约束条件（KKT条件）为
 
-\\[\begin{cases}
+$$\begin{cases}
 u_i & \geq 0 \\\\
 \sum_{i=1}^{N}{u_iy_i} & =0
-\end{cases}\\]
+\end{cases}$$
 
 则$$f(x)=wx+b=\sum_{i=1}^{N}{u_iy_ix_i^T}x+b$$
 
@@ -83,8 +83,3 @@ SMO算法主要用于解决SVM的对偶形式中$$u$$的最优化选取问题。
 3. 此时原优化问题转化为一个单变量二次的求最值问题，最值在边界或导数为0处取得
 4. 重复步骤2-3，直至$$u$$达到稳定
 
-$$f(n) = 
-\begin{cases}
-n/2, & \text{if $n$ is even} \\[2ex]
-3n+1, & \text{if $n$ is odd}
-\end{cases}$$
