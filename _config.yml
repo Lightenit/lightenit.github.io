@@ -14,7 +14,7 @@ description              : "An amazing website."
 url                      : "https://lightenit.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "Lightenit/lightenit.github.io"
-teaser                   : /assets/images/unsplash-image-3.jpg
+teaser                   : "/assets/images/unsplash-image-3.jpg"
 breadcrumbs              :  ture # true, false (default)
 words_per_minute         : 20
 comments:
