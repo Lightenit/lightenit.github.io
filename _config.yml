@@ -18,7 +18,7 @@ teaser                   : "/assets/images/unsplash-image-3.jpg"
 breadcrumbs              : ture # true, false (default)
 words_per_minute         : 20
 comments:
-  provider               : "custom"  # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
+  provider               : "staticman"  # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
   disqus:
     shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
@@ -36,7 +36,7 @@ staticman:
   format                 : "yml"
   moderation             : true
   path                   : "docs/_data/comments/{options.slug}"
-  requiredFields         : ['name', 'message']
+  requiredFields         : ['name', 'email' ,'message']
   transforms:
     email                : "md5"
   generatedFields:
