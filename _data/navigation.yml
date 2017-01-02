@@ -1,7 +1,7 @@
 # main links
 main:
     - title: "About"
-      url: https://www.google.com.hk/
+      url: /about/
   # - title: "Quick-Start Guide"
   #  url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   # - title: "About"
