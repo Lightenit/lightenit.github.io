@@ -15,7 +15,7 @@ tags:
 
 ![Inside Attention](../pic/in_attention.png)
 
-\\[ MultiHead(Q,K,V) = Concat(head_1, head_2,\cdots, \head_h)W^o\\]
+\\[ MultiHead(Q,K,V) = Concat(head_1, head_2,\cdots, head_h)W^o\\]
 \\[ head_i = Attention(QW_i^Q,KW_i^K,VW_i^V)\\]
 
 这里的attention非常类似于一种一列的卷积，不同的head就像是不同的卷积核，这里是一个线性的卷积核。该方法的优点主要是速度非常快，但是在框架上感觉与普通的神经网络并没有太大的差别。
