@@ -9,7 +9,7 @@ tags:
  
  这篇文章总体上来看也是通过VAE来处理Style Transfer的问题，并且在模型中加入了对抗的部分。具体模型如下：
 
- 对于database中的sentence $$x$$，认为其有两个隐变量影响，分别是$$z$$(content)和$$y$$(style), 由于目前已知为条件变量$$p(x|y)$$，文中的模型主要由E(encoder), G(generator), D(discriminator)组成。其中：
+ 对于database中的sentence $$x$$，认为其有两个隐变量影响，分别是$$z$$(content)和$$y$$(style), 由于目前已知为条件变量$$p(x\|y)$$，文中的模型主要由E(encoder), G(generator), D(discriminator)组成。其中：
 
  E: infer content z from sen x and style y.(input: x and y, output: z)
 
