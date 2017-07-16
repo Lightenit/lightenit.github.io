@@ -1,5 +1,5 @@
 ---
-title: [PaperReading]Controlling Linguistic Style Aspects in Neural Language Generation
+title: "[PaperReading]Controlling Linguistic Style Aspects in Neural Language Generation"
 tags: 
   - NLP
   - Style Transfer
@@ -19,7 +19,7 @@ style: the length of the text, whether it is descriptive, whether it is written 
 
 之后直接利用公式：
 
-\\[ P(\omega_1, \omega_2, \cdots, \omega_n)=\prod_{t=1}^{n}{P( \omega_t |\omega_1,\cdots,\omega_{t-1}, c)} \\]
+\\[ P(\omega_1, \omega_2, \cdots, \omega_n)=\prod_{t=1}^{n}{P( \omega_t\|\omega_1,\cdots,\omega_{t-1}, c)} \\]
 
 直接带入数据集进行训练，在利用训练好的进行生成即可。
 
