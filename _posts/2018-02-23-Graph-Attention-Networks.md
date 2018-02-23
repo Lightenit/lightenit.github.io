@@ -38,16 +38,18 @@ $$\begin{cases}
 文中的attention mechanism选取为一个单层网络：
 
 $$
-a(W\vec{h_i}, W\vec{h_j})=LeakyReLU(\vec{a}^T[W\vec{h_i} || W\vec{h_j}])$$
+a(W\vec{h_i}, W\vec{h_j})=LeakyReLU(\vec{a}^T[W\vec{h_i} \|\| W\vec{h_j}])$$
 
-$$||$$表示concatenation, $$\vec{a}\in \mathcal{R}^{2F'}$$.
+
+$$\|\|$$表示concatenation, $$\vec{a}\in \mathcal{R}^{2F'}$$.
+
 
 ### Multi-Head attention
 
 Multi-Head attention相当于对不同的attention mechanism进行结合。这里考虑有$$K$$个attention mechanism. 
 
 $$\begin{cases}
-\vec{h'_i}=||^{K}_{k=1}\sigma(\sum_{j\in N_i}{\alpha^k_{ij}W^k\vec{h_j}})\\
+\vec{h'_i}=\|\|^{K}_{k=1}\sigma(\sum_{j\in N_i}{\alpha^k_{ij}W^k\vec{h_j}})\\
 \vec{h'_i}=\sigma(\frac{1}{K}\sum_{k=1}^{K}\sum_{j\in N_i}{\alpha_{ij}^kW^k\vec{h}_j})\\
 \end{cases}$$
 
