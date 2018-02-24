@@ -3,9 +3,11 @@ title: 使用VimScript读取Python程序中的函数并写入TeX中
 tags: 
   - Vim
 ---
- 
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
- 
+  
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
 ### 摘要
 
  利用VimScript实现读取python文件中的函数并将函数写入TeX文档中，可以在写程序report时提高效率（称为PyToTeX）。具体做法就是读取python文件中定义的函数，置于一个description的环境中，每个函数作为一个item。

@@ -5,7 +5,9 @@ tags:
   - Style Transfer
 ---
  
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 
 这篇文章的作者之一是Yoav Goldberg，不过文章的模型比较简单。主要就是建立在RNN上，再人工的加上几个style和content特征加在条件概率上，其实相当于人工的为数据集进行了一个分组，分组之后分别训练，这样很显然会对ppl有提升。
 

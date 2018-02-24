@@ -5,7 +5,9 @@ tags:
   - NLP
 ---
  
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
  
  这篇文章的思想是利用attention完成一些RNN，CNN在NLP中的工作，即提出了一个完全由attention构成的encoder-decoder的模型。具体模型如下图可以看出。
 

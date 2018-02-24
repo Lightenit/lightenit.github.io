@@ -5,7 +5,9 @@ tags:
   - Style Transfer
 ---
  
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
  
  这篇文章的想法是提供document D1 in Style S1 和 Style S2 生成document D2 in Style S2. 并且D2与D1的content相同。
 

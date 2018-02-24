@@ -5,7 +5,9 @@ tags:
   - 机器学习复习
 ---
 
-<script type="text/javascript" src="../assets/js/vendor/MathJax-2.7.2/MathJax.js"></script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
  
 ## 支持向量机
 

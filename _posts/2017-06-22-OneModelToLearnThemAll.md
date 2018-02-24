@@ -4,7 +4,9 @@ tags:
   - PaperReading
 ---
  
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
  
  这篇文章与Attention is all you need的作者大致相同，文中也运用到了attention里面的模型。该文章的主要想法是希望能够建立一个较为通用，能够解决多个任务的encoding - decoding的模型。文中的模型共解决了八个任务，包括Image Caption, Image classification, Machine Translation, Speech recognition等。
 

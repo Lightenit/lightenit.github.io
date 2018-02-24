@@ -5,7 +5,9 @@ tags:
   - NLP
 ---
  
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
  
  这篇文章总体上来看也是通过VAE来处理Style Transfer的问题，并且在模型中加入了对抗的部分。具体模型如下：
 
