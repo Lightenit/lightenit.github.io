@@ -4,7 +4,9 @@ tags:
   - Node Embedding
 ---
  
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 
 这篇博客主要是总结目前一些经典的Node Embedding的方法，比如LINE, GraRep, DeepWalk, Node2Vec这些。
 
