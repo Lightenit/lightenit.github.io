@@ -2,7 +2,7 @@
 title:  "[PaperReading]Graph Attention Networks"
 tags: 
   - attention
-  - graph embedding
+  - node embedding
   - PaperReading
 ---
  
