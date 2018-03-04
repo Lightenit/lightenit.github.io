@@ -40,3 +40,44 @@ $$O_2=-\sum_{(i,j)\in E}{w_{ij}\log p_2(v_j|v_i)}$$
 
 LINE的二阶相似性非常值得借鉴，尤其对于推荐系统中，可以考虑相同的想法。
 
+## GraRep (2015 CIKM)
+
+GraRep也是基于矩阵分解的方法，同时希望能够考虑到$$k$$步的相似性。这里的$$k$$是考虑前$$K$$步的相似性的意思。这里主要考虑是Random Path的相似性，节点$$i$$和$$j$$的相似性相当于节点$$i$$经过$$k$$步走到节点$$j$$的概率。
+
+首先固定步数$$k$$，此时的相似度为$$A^k$$. $$S$$为邻接矩阵。
+
+$$
+\begin{cases}
+A = D^{-1}S\\
+D = diag\{\sum_p{S_{ip}}\}
+$$
+
+则此时loss function为：
+
+$$
+\begin{aligned}
+L_k(w) = (\sum_{c\in V}p_k(c|w)\log\sigma(\vec{w}\cdot\vec{c}))+\lambda\mathcal{E}_{c'\sim p_k(V)}{\log\sigma(-\vec{w}\cdot\vec{c'})}\\
+A_{w,c}^k\cdot\log\sigma(\vec{w}\vec{c})+\frac{\lambda}{N}\sum_{w'}{A_{w',c}^k\cdot\log\sigma(-\vec{w}\vec{c})}
+\end{aligned}
+$$
+
+设$$e=\vec{w}\cdot\vec{c}$$, $$\frac{\partial{L_k}}{\partial{e}}=0$$,有
+
+$$\vec{w}\vec{c}=\log(\frac{A_{w,c}^k}{\sum_{w'}{A^k_{w',c}}})-\log\beta, \beta=\frac{\lambda}{N}$$
+
+这里和LINE类似吧，也是两个矩阵，$$W$$代表节点本身的表示，而$$C$$代表每个节点作为context时的表示。之后通过SVD分解得到$$W$$:
+
+$$
+\begin{cases}
+Y_{i,j}^k=W_i^k\cdot C_j^k=\log(\frac{A_{i,j}^k}{\sum_t{A_{t,j}^k}})-\log\beta\\
+X_{i,j}^k=\max(Y_{i,j}^k,0)\\
+X^k = U^k\Sigma^k(V^k)^T\\
+W^k = U_d^k(\Sigma_d^k)^{\frac{1}{2}}\\
+\end{cases}
+$$
+
+$$U_d^k$$为矩阵$$U^k$$的前$$d$$列。由此可以得到在$$k$$步时的表示。则GraRep算法流程为：
+
+1. 计算出$$A^k, k=1,2,\cdots,K$$
+2. 对每个$$k$$, 计算出每个节点的表示$$W^k$$
+3. 将所有的$$W^k$$直接拼接，得到最终的表示$$W$$
