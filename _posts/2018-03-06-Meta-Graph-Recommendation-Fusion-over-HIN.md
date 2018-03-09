@@ -28,7 +28,7 @@ $$x_n=[u_i^{(1)},\cdots,u_i^{(l)},\cdots,u_i^{(L)},b_j^{(1)},\cdots,b_j^{(l)},\c
 则对于不同的$$u_i, b_j$$训练因子机模型：
 
 $$
-y^n(w,V)=w_0+\sum_{i=1}^d{w_ix_i^n}+\sum_{i=1}^d\sum{j=i+1}^d{<v_i,v_j>x_i^nx_j^n}$$
+y^n(w,V)=w_0+\sum_{i=1}^d{w_ix_i^n}+\sum_{i=1}^d\sum_{j=i+1}^d{<v_i,v_j>x_i^nx_j^n}$$
 
 $$\min_{w,V}\sum_{n=1}^N{(y^n-y^n(w,V))^2}$$
 
